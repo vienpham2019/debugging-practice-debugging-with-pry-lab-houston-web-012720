@@ -1,3 +1,4 @@
+
 class Person
   attr_accessor :name, :candy_lover
 
@@ -6,20 +7,26 @@ class Person
     @candy_lover = candy_lover
   end
 
-  def tall?
-    true
-  end
+  # def tall?
+    
+  #   true
+  # end
 
-  def basketball_player?
-    false
-  end
+  # def basketball_player?
+  #   false
+  # end
 
   def likes_candy?
-    true
+    if @candy_lover
+      true
+    else
+      false
+    end
   end
 
   def ballin_candy_lover?
-    if @candy_lover == true
+    binding.pry
+    if likes_candy?
       "Aw sweet, this cat loves them some candy!"
     else
       10.times do
@@ -27,3 +34,5 @@ class Person
     end
   end
 end
+
+
